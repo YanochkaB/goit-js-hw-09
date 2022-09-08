@@ -8,20 +8,20 @@ btnStop.addEventListener('click', stopShowColor);
 //запуск зміни кольору
 function startShowColor(evt) {
     timerId = setInterval(changeBgColor, 1000);
-    evt.target.disablet = true;
-    btnStop.disablet = false;
+    evt.target.disabled = true;
+    btnStop.disabletd = false;
 }
 
 //стоп зміни кольору 
 function stopShowColor(evt) {
     clearInterval(timerId);
-    evt.target.disablet = true;
-    btnStart.disablet = false;
+    evt.target.disabled = true;
+    btnStart.disabled = false;
 }
 
 //ф-ція зміни кольору body
 function changeBgColor() {
-    document.body.style.background = getRandomHexColor();
+    document.body.style.backgroundColor = getRandomHexColor();
 }
 
 //випадкове значення кольору
